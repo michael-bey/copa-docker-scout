@@ -55,6 +55,15 @@ export PATH=$PATH:$(pwd)/dist/$(uname -s | tr '[:upper:]' '[:lower:]')_$(uname -
 
 ## Usage
 
+### 0. Basic Plugin Test
+```shell
+# test plugin with example config
+copa-docker-scout ./testdata/nginx1.26.1.json
+# this will print the report in JSON format. Example:
+# {"apiVersion":"v1alpha1","metadata":{"os":{"type":"debian","version":"11"},"config":{"arch":""}},"updates":[{"name":"systemd","installedVersion":"247.3-7","fixedVersion":"247.3-7+deb11u6","vulnerabilityID":"CVE-2023-50868"},{"name":"libwebp","installedVersion":"0.6.1-2.1","fixedVersion":"0.6.1-2.1+deb11u2","vulnerabilityID":"CVE-2023-5129"}
+
+```
+
 ### 1. Generate a Docker Scout Report
 
 First, generate a vulnerability report using Docker Scout:
