@@ -93,7 +93,7 @@ copa-docker-scout nginx1.26.1.json > processed-report.json
 # Then use Copa to patch the image
 copa patch --scanner docker-scout --image nginx:1.21.6 \
 -r processed-report.json -t nginx-1.21.6-patched \
---addr docker-container://buildkitd
+--addr docker-container://buildkitd -
 ```
 
 ### 3. Verify Patching
